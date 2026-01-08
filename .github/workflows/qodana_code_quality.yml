@@ -1,4 +1,4 @@
-name: DevSecOps Pipeline
+name: DevSecOps Pipeline (Full)
 
 on:
   push:
@@ -54,7 +54,7 @@ jobs:
             mvn -B verify sonar:sonar \
               -Dsonar.projectKey=secure-microservices-ecommerce \
               -Dsonar.host.url=$SONAR_HOST_URL \
-              -Dsonar.login=$SONAR_TOKEN
+              -Dsonar.token=$SONAR_TOKEN
           else
             echo "SonarQube scan skipped: SONAR_TOKEN or SONAR_HOST_URL not configured"
           fi

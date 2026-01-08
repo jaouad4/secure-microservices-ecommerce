@@ -41,13 +41,13 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          if [ -n "$SONAR_TOKEN" ]; then
+          if [ -n "$SONAR_TOKEN" ] && [ -n "$SONAR_HOST_URL" ]; then
             mvn -B verify sonar:sonar \
               -Dsonar.projectKey=secure-microservices-ecommerce \
               -Dsonar.host.url=$SONAR_HOST_URL \
-              -Dsonar.login=$SONAR_TOKEN
+              -Dsonar.token=$SONAR_TOKEN
           else
-            echo "SonarQube scan skipped: SONAR_TOKEN not configured"
+            echo "SonarQube scan skipped: SONAR_TOKEN or SONAR_HOST_URL not configured"
           fi
         continue-on-error: true
 
@@ -62,6 +62,8 @@ jobs:
             --enableRetired
             --enableExperimental
             --failOnCVSS 7
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         continue-on-error: true
 
       - name: Upload Dependency-Check Report
@@ -102,10 +104,11 @@ jobs:
         continue-on-error: true
 
       - name: Upload Trivy results to GitHub Security
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: 'trivy-results.sarif'
+        continue-on-error: true
 
   code-quality:
     name: Code Quality Checks
