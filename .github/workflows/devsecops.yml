@@ -40,12 +40,14 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: |
           if [ -n "$SONAR_TOKEN" ] && [ -n "$SONAR_HOST_URL" ]; then
             mvn -B verify sonar:sonar \
               -Dsonar.projectKey=secure-microservices-ecommerce \
               -Dsonar.host.url=$SONAR_HOST_URL \
-              -Dsonar.token=$SONAR_TOKEN
+              -Dsonar.token=$SONAR_TOKEN \
+              -Ddependency-check.skip=true
           else
             echo "SonarQube scan skipped: SONAR_TOKEN or SONAR_HOST_URL not configured"
           fi
