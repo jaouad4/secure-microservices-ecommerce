@@ -50,21 +50,20 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          if [ -n "$SONAR_TOKEN" ]; then
+          if [ -n "$SONAR_TOKEN" ] && [ -n "$SONAR_HOST_URL" ]; then
             mvn -B verify sonar:sonar \
               -Dsonar.projectKey=secure-microservices-ecommerce \
               -Dsonar.host.url=$SONAR_HOST_URL \
               -Dsonar.login=$SONAR_TOKEN
           else
-            echo "SonarQube scan skipped: SONAR_TOKEN not configured"
+            echo "SonarQube scan skipped: SONAR_TOKEN or SONAR_HOST_URL not configured"
           fi
         continue-on-error: true
 
       # Analyse des dépendances avec OWASP Dependency-Check
       - name: OWASP Dependency-Check
         uses: dependency-check/Dependency-Check_Action@main
-        env:
-          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        id: depcheck
         with:
           project: 'secure-microservices-ecommerce'
           path: '.'
@@ -73,7 +72,8 @@ jobs:
             --enableRetired
             --enableExperimental
             --failOnCVSS 7
-            --nvdApiKey ${{ secrets.NVD_API_KEY }}
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         continue-on-error: true
 
       - name: Upload Dependency-Check Report
