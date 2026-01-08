@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ma.enset</groupId>
+    <artifactId>secure-microservices-ecommerce</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Secure Microservices E-Commerce</name>
+    <description>Application micro-services sécurisée</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <spring.boot.version>3.5.9</spring.boot.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Security Plugin Versions -->
+        <dependency-check-maven.version>10.0.4</dependency-check-maven.version>
+        <sonar-maven-plugin.version>4.0.0.4121</sonar-maven-plugin.version>
+    </properties>
+
+    <modules>
+        <!-- Les modules seront ajoutés progressivement -->
+        <!-- <module>product-service</module> -->
+        <!-- <module>order-service</module> -->
+        <!-- <module>api-gateway</module> -->
+    </modules>
+
+    <build>
+        <plugins>
+            <!-- OWASP Dependency-Check Plugin -->
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>${dependency-check-maven.version}</version>
+                <configuration>
+                    <format>ALL</format>
+                    <failBuildOnCVSS>7</failBuildOnCVSS>
+                    <suppressionFiles>
+                        <suppressionFile>dependency-check-suppressions.xml</suppressionFile>
+                    </suppressionFiles>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- SonarQube Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar-maven-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
