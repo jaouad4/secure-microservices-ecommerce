@@ -1,0 +1,42 @@
+services:
+  # 1. PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: sieger-postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker-init/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - sieger-net
+
+  # 2. Keycloak Identity Server
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.5.0
+    container_name: sieger-keycloak
+    command: start-dev --import-realm
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+      - KC_HTTP_ENABLED=true
+      - KC_HOSTNAME=localhost
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./docker-init/keycloak-data/realm-export.json:/opt/keycloak/data/import/realm-export.json
+    networks:
+      - sieger-net
+
+# Networks & Volumes
+networks:
+  sieger-net:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

@@ -1,0 +1,6 @@
+CREATE DATABASE product_db;
+CREATE DATABASE order_db;
+CREATE DATABASE keycloak_db;
+GRANT ALL PRIVILEGES ON DATABASE product_db TO postgres;
+GRANT ALL PRIVILEGES ON DATABASE order_db TO postgres;
+GRANT ALL PRIVILEGES ON DATABASE keycloak_db TO postgres;
