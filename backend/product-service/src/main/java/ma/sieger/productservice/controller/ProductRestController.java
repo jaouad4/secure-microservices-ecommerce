@@ -20,13 +20,11 @@ public class ProductRestController {
     private final ProductService productService;
 
     @GetMapping
-    @PreAuthorize("hasAnyRole('ADMIN', 'CLIENT')")
     public ResponseEntity<List<ProductResponseDTO>> getAllProducts() {
         return ResponseEntity.ok(productService.getAllProducts());
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAnyRole('ADMIN', 'CLIENT')")
     public ResponseEntity<ProductResponseDTO> getProductById(@PathVariable String id) {
         return ResponseEntity.ok(productService.getProductById(id));
     }
