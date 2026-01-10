@@ -701,6 +701,7 @@
       "redirectUris": [
         "http://localhost:8888/*",
         "http://localhost:5173/*",
+        "http://localhost:3000/*",
         "https://oauth.pstmn.io/v1/callback"
       ],
       "webOrigins": [
@@ -721,7 +722,7 @@
         "oidc.ciba.grant.enabled": "false",
         "backchannel.logout.session.required": "true",
         "standard.token.exchange.enabled": "false",
-        "post.logout.redirect.uris": "http://localhost:5173/*##http://localhost:8888/*",
+        "post.logout.redirect.uris": "http://localhost:5173/*##http://localhost:8888/*##http://localhost:3000/*",
         "oauth2.device.authorization.grant.enabled": "false",
         "pkce.code.challenge.method": "S256",
         "backchannel.logout.revoke.offline.tokens": "false",
