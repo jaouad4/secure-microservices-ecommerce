@@ -14,6 +14,11 @@ services:
       - ./docker-init/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - sieger-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   # 2. Keycloak Identity Server
   keycloak:
@@ -31,6 +36,108 @@ services:
       - ./docker-init/keycloak-data/realm-export.json:/opt/keycloak/data/import/realm-export.json
     networks:
       - sieger-net
+
+  # 3. Discovery Service
+  discovery-service:
+    build: ./backend/discovery-service
+    container_name: discovery-service
+    ports:
+      - "8761:8761"
+    networks:
+      - sieger-net
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8761/actuator/health" ]
+      interval: 10s
+      retries: 4
+
+  # 4. Config Service
+  config-service:
+    build: ./backend/config-service
+    container_name: config-service
+    ports:
+      - "9999:9999"
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+    networks:
+      - sieger-net
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9999/actuator/health" ]
+      interval: 10s
+      retries: 4
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+
+  # 5. Product Service
+  product-service:
+    build: ./backend/product-service
+    container_name: product-service
+    ports:
+      - "8081:8081"
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+      - DB_HOST=postgres
+      - KEYCLOAK_ISSUER_URI=http://localhost:8080/realms/ecommerce-realm
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8080/realms/ecommerce-realm/protocol/openid-connect/certs
+    networks:
+      - sieger-net
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8081/actuator/health" ]
+      interval: 10s
+      retries: 4
+    depends_on:
+      config-service:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  # 6. Order Service
+  order-service:
+    build: ./backend/order-service
+    container_name: order-service
+    ports:
+      - "8082:8082"
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+      - DB_HOST=postgres
+      - KEYCLOAK_ISSUER_URI=http://localhost:8080/realms/ecommerce-realm
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8080/realms/ecommerce-realm/protocol/openid-connect/certs
+    networks:
+      - sieger-net
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8082/actuator/health" ]
+      interval: 10s
+      retries: 4
+    depends_on:
+      config-service:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  # 7. Gateway Service
+  gateway-service:
+    build: ./backend/gateway-service
+    container_name: gateway-service
+    ports:
+      - "8888:8888"
+    environment:
+      - DISCOVERY_SERVICE_URL=http://discovery-service:8761/eureka
+      - CONFIG_SERVICE_URL=http://config-service:9999
+      - KEYCLOAK_ISSUER_URI=http://localhost:8080/realms/ecommerce-realm
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8080/realms/ecommerce-realm/protocol/openid-connect/certs
+    networks:
+      - sieger-net
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8888/actuator/health" ]
+      interval: 10s
+      retries: 4
+    depends_on:
+      config-service:
+        condition: service_healthy
+      discovery-service:
+        condition: service_healthy
 
 # Networks & Volumes
 networks:
