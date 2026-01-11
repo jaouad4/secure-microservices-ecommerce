@@ -4,139 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="380c5a58-f8cb-4cad-b108-b12dfee25e42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/silent-check-sso.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/auth/ProtectedRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/MainLayout/MainLayout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/MainLayout/MainLayout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/MainLayout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Navbar/Navbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Navbar/Navbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/Navbar/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/layout/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Badge/Badge.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Badge/Badge.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Badge/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Button/Button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Button/Button.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Button/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Card/Card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Card/Card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Card/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/EmptyState/EmptyState.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/EmptyState/EmptyState.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/EmptyState/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Input/Input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Input/Input.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Input/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Modal/Modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Modal/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Modal/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Pagination/Pagination.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Pagination/Pagination.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Pagination/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Select/Select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Select/Select.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Select/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Skeleton/Skeleton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Skeleton/Skeleton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Skeleton/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Spinner/Spinner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Spinner/Spinner.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/Spinner/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ui/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/contexts/AuthContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/contexts/CartContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/contexts/NotificationContext.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/contexts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useClickOutside.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useDebounce.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useLocalStorage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useMediaQuery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/usePagination.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/CartPage/CartPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/CartPage/CartPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/CartPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/CheckoutPage/CheckoutPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/CheckoutPage/CheckoutPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/CheckoutPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/cart/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/ForbiddenPage/ForbiddenPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/ForbiddenPage/ForbiddenPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/ForbiddenPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/NotFoundPage/NotFoundPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/NotFoundPage/NotFoundPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/NotFoundPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/error/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/home/HomePage/HomePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/home/HomePage/HomePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/home/HomePage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/home/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/AdminOrdersPage/AdminOrdersPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/AdminOrdersPage/AdminOrdersPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/AdminOrdersPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/MyOrdersPage/MyOrdersPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/MyOrdersPage/MyOrdersPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/MyOrdersPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/OrderDetailPage/OrderDetailPage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/OrderDetailPage/OrderDetailPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/OrderDetailPage/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/orders/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductDetail/ProductDetail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductDetail/ProductDetail.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductDetail/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductForm/ProductForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductForm/ProductForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductForm/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductList/ProductList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductList/ProductList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/ProductList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/products/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/keycloak.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/orderService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/services/productService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/test/setup.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/test/test-utils.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/formatters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/utils/validators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="380c5a58-f8cb-4cad-b108-b12dfee25e42" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,10 +25,10 @@
     &quot;accountId&quot;: &quot;f21a7783-3e75-4406-8c71-e5aca94c551a&quot;
   }
 }</component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -181,27 +49,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ConfigServiceApplication.executor": "Run",
-    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ConfigServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -211,11 +84,40 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="ConfigServiceApplication" value="STOPPED" />
+              <entry key="DiscoveryServiceApplication" value="STOPPED" />
+              <entry key="GatewayServiceApplication" value="STOPPED" />
+              <entry key="OrderServiceApplication" value="STOPPED" />
+              <entry key="ProductServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ConfigServiceApplication">
     <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.configservice.ConfigServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.configservice.ConfigServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.discoveryservice.DiscoveryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -234,9 +136,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ma.sieger.productservice.ProductServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
