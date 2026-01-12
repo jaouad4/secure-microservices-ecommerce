@@ -42,7 +42,18 @@ The primary focus of this project is to implement industry-standard security pra
 
 The system is composed of several autonomous services working together. Below is the high-level architecture:
 
+![Gloabal Architecture](docs/arch.png)
+
+### Class Diagram
+
 ![Architecture Diagram](docs/class_diagramm.png)
+
+### Sequential Diagram
+
+![Sequential Diagram](docs/diagramme_sequence.png)
+
+### JWT Architecture
+![jwt](docs/jwt.png)
 
 ### Backend Services
 
