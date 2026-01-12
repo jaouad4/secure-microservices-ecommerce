@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="380c5a58-f8cb-4cad-b108-b12dfee25e42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/gateway-service/src/main/java/ma/sieger/gatewayservice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/gateway-service/src/main/java/ma/sieger/gatewayservice/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/product-service/.ai/mcp/mcp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-init/keycloak-data/realm-export.json" beforeDir="false" afterPath="$PROJECT_DIR$/docker-init/keycloak-data/realm-export.json" afterDir="false" />
-    </list>
+    <list default="true" id="380c5a58-f8cb-4cad-b108-b12dfee25e42" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +199,7 @@
       <updated>1768050041174</updated>
       <workItem from="1768050045056" duration="22000" />
       <workItem from="1768148787280" duration="869000" />
-      <workItem from="1768154502189" duration="2055000" />
+      <workItem from="1768154502189" duration="2654000" />
     </task>
     <servers />
   </component>
