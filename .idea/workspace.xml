@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="380c5a58-f8cb-4cad-b108-b12dfee25e42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/OrderServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/clients/ProductRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/clients/ProductRestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/repositories/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/repositories/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/services/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/web/OrderRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/order-service/src/main/java/ma/sieger/orderservice/web/OrderRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/ProductServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/controller/ProductRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/controller/ProductRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/product-service/src/main/java/ma/sieger/productservice/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="380c5a58-f8cb-4cad-b108-b12dfee25e42" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +200,7 @@
       <workItem from="1768050045056" duration="22000" />
       <workItem from="1768148787280" duration="869000" />
       <workItem from="1768154502189" duration="2654000" />
-      <workItem from="1768187086289" duration="244000" />
+      <workItem from="1768187086289" duration="1603000" />
     </task>
     <servers />
   </component>
