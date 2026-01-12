@@ -6,6 +6,8 @@ import ma.sieger.orderservice.services.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,9 +24,19 @@ public class OrderRestController {
 
     @PostMapping
     @PreAuthorize("hasRole('CLIENT')")
-    public ResponseEntity<OrderResponseDTO> placeOrder(@RequestBody OrderRequestDTO orderRequest) {
-        OrderResponseDTO savedOrder = orderService.placeOrder(orderRequest);
+    public ResponseEntity<OrderResponseDTO> placeOrder(
+            @RequestBody OrderRequestDTO orderRequest,
+            @AuthenticationPrincipal Jwt jwt) {
+        String userId = jwt.getSubject();
+        OrderResponseDTO savedOrder = orderService.placeOrder(orderRequest, userId);
         return new ResponseEntity<>(savedOrder, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/my-orders")
+    @PreAuthorize("hasRole('CLIENT')")
+    public ResponseEntity<List<OrderResponseDTO>> getMyOrders(@AuthenticationPrincipal Jwt jwt) {
+        String userId = jwt.getSubject();
+        return ResponseEntity.ok(orderService.getOrdersByUserId(userId));
     }
 
     @GetMapping("/{id}")

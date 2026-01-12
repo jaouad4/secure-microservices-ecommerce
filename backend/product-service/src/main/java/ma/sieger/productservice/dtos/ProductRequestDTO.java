@@ -16,5 +16,7 @@ public record ProductRequestDTO(
         Double price,
 
         @Min(value = 0, message = "Quantity cannot be negative")
-        int quantity
+        int quantity,
+
+        String imageUrl
 ) {}

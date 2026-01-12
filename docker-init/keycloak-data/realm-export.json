@@ -699,6 +699,7 @@
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "redirectUris": [
+        "http://localhost/*",
         "http://localhost:8888/*",
         "http://localhost:5173/*",
         "http://localhost:3000/*",
@@ -722,7 +723,7 @@
         "oidc.ciba.grant.enabled": "false",
         "backchannel.logout.session.required": "true",
         "standard.token.exchange.enabled": "false",
-        "post.logout.redirect.uris": "http://localhost:5173/*##http://localhost:8888/*##http://localhost:3000/*",
+        "post.logout.redirect.uris": "http://localhost/*##http://localhost:5173/*##http://localhost:8888/*##http://localhost:3000/*",
         "oauth2.device.authorization.grant.enabled": "false",
         "pkce.code.challenge.method": "S256",
         "backchannel.logout.revoke.offline.tokens": "false",
@@ -1440,6 +1441,7 @@
           "config": {
             "user.attribute": "foo",
             "introspection.token.claim": "true",
+            "id.token.claim": "true",
             "access.token.claim": "true",
             "claim.name": "realm_access.roles",
             "jsonType.label": "String",
@@ -2594,5 +2596,41 @@
   },
   "clientPolicies": {
     "policies": []
-  }
+  },
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "Admin",
+      "lastName": "User",
+      "email": "admin@example.com",
+      "attributes": {},
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["ADMIN", "default-roles-ecommerce-realm"]
+    },
+    {
+      "username": "client",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "client@example.com",
+      "attributes": {},
+      "credentials": [
+        {
+          "type": "password",
+          "value": "client123",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["CLIENT", "default-roles-ecommerce-realm"]
+    }
+  ]
 }

@@ -52,6 +52,7 @@ public class ProductServiceImpl implements ProductService {
         product.setDescription(productRequestDTO.description());
         product.setPrice(productRequestDTO.price());
         product.setQuantity(productRequestDTO.quantity());
+        product.setImageUrl(productRequestDTO.imageUrl());
 
         Product updatedProduct = productRepository.save(product);
         return productMapper.fromEntity(updatedProduct);
@@ -63,5 +64,19 @@ public class ProductServiceImpl implements ProductService {
             throw new EntityNotFoundException("Product not found with ID: " + id);
         }
         productRepository.deleteById(id);
+    }
+
+    @Override
+    public ProductResponseDTO decreaseStock(String id, int quantity) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Product not found with ID: " + id));
+        
+        if (product.getQuantity() < quantity) {
+            throw new IllegalArgumentException("Insufficient stock. Available: " + product.getQuantity() + ", Requested: " + quantity);
+        }
+        
+        product.setQuantity(product.getQuantity() - quantity);
+        Product updatedProduct = productRepository.save(product);
+        return productMapper.fromEntity(updatedProduct);
     }
 }

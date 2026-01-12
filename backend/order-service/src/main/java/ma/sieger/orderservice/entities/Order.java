@@ -19,6 +19,8 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
+    private String userId;
+
     private LocalDate date;
 
     @Enumerated(EnumType.STRING)

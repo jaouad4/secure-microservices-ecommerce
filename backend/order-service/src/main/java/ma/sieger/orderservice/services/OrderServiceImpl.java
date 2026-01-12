@@ -39,8 +39,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public OrderResponseDTO placeOrder(OrderRequestDTO orderRequest) {
+    public OrderResponseDTO placeOrder(OrderRequestDTO orderRequest, String userId) {
         Order order = new Order();
+        order.setUserId(userId);
         order.setDate(LocalDate.now());
         order.setStatus(OrderStatus.CREATED);
 
@@ -50,6 +51,15 @@ public class OrderServiceImpl implements OrderService {
 
         orderRequest.getProducts().forEach((productId, quantity) -> {
             Product product = productRestClient.findProductById(productId);
+
+            // Verify stock availability
+            if (product.getQuantity() < quantity) {
+                throw new RuntimeException("Insufficient stock for product: " + product.getName() + 
+                    ". Available: " + product.getQuantity() + ", Requested: " + quantity);
+            }
+
+            // Decrease stock in product service
+            productRestClient.decreaseStock(productId, quantity);
 
             OrderLine orderLine = new OrderLine();
             orderLine.setProductId(productId);
@@ -87,6 +97,14 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<OrderResponseDTO> getAllOrders() {
         List<Order> orders = orderRepository.findAll();
+        return orders.stream()
+                .map(order -> getOrderById(order.getId()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<OrderResponseDTO> getOrdersByUserId(String userId) {
+        List<Order> orders = orderRepository.findByUserId(userId);
         return orders.stream()
                 .map(order -> getOrderById(order.getId()))
                 .collect(Collectors.toList());
