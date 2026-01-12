@@ -47,8 +47,8 @@ public class OrderServiceApplication {
                 // Buy 1 unit of this product
                 request.setProducts(Map.of(productId, 1));
 
-                // 4. Place the Order
-                OrderResponseDTO savedOrder = orderService.placeOrder(request);
+                // 4. Place the Order (using a test userId for CommandLineRunner)
+                OrderResponseDTO savedOrder = orderService.placeOrder(request, "test-user-id");
 
                 // 5. Success!
                 System.out.println("✅ TEST SUCCESS! Order Created via Feign Client.");

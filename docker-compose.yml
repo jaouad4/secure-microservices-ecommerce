@@ -139,12 +139,12 @@ services:
       discovery-service:
         condition: service_healthy
 
-  # 8. Frontend Service
+  # 8. Frontend React
   frontend:
     build: ./frontend
     container_name: ecommerce-frontend
     ports:
-      - "80:80"
+      - "5173:80"
     networks:
       - sieger-net
     depends_on:

@@ -4,6 +4,8 @@ import ma.sieger.orderservice.model.Product;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -15,4 +17,7 @@ public interface ProductRestClient {
 
     @GetMapping("/api/products")
     List<Product> allProducts();
+
+    @PutMapping("/api/products/{id}/decrease-stock")
+    Product decreaseStock(@PathVariable("id") String id, @RequestParam("quantity") int quantity);
 }

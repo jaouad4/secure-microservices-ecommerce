@@ -47,4 +47,12 @@ public class ProductRestController {
         productService.deleteProduct(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PutMapping("/{id}/decrease-stock")
+    @PreAuthorize("hasRole('CLIENT')")
+    public ResponseEntity<ProductResponseDTO> decreaseStock(
+            @PathVariable String id,
+            @RequestParam int quantity) {
+        return ResponseEntity.ok(productService.decreaseStock(id, quantity));
+    }
 }

@@ -23,4 +23,6 @@ public class Product {
 
     @Column(nullable = false)
     private int quantity;
+
+    private String imageUrl;
 }

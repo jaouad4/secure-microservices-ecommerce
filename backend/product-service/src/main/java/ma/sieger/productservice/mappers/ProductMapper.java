@@ -15,7 +15,8 @@ public class ProductMapper {
             product.getName(),
             product.getDescription(),
             product.getPrice(),
-            product.getQuantity()
+            product.getQuantity(),
+            product.getImageUrl()
         );
     }
 
@@ -26,6 +27,7 @@ public class ProductMapper {
             .description(productRequestDTO.description())
             .price(productRequestDTO.price())
             .quantity(productRequestDTO.quantity())
+            .imageUrl(productRequestDTO.imageUrl())
             .build();
     }
 }
