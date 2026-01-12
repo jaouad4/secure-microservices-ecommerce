@@ -46,6 +46,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
 
       - name: SonarQube Scan
+        working-directory: backend
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
@@ -141,6 +142,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Run Maven Tests
+        working-directory: backend
         run: |
           if [ -f "pom.xml" ]; then
             mvn -B clean test || echo "No tests to run yet"
